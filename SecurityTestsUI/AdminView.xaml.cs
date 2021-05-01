@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Caliburn.Micro;
 using System.Collections.ObjectModel;
+using SecurityTestsUI.Reports;
 
 namespace SecurityTestsUI
 {
@@ -222,19 +223,40 @@ namespace SecurityTestsUI
 
         private void ReportByEmployees_Click(object sender, RoutedEventArgs e)
         {
-            //ReportByEmployeesForm report = new ReportByEmployeesForm();
-            //report.Show();
+            var label = new DevExpress.XtraReports.UI.XRLabel() {
+                Text = resourseManager.GetString("ReportByEmployees", _currentCulture)
+            };
+            
+            ReportByEmployees report = new ReportByEmployees();
+            report.label1 = label;
+            ReportsView reportView = new ReportsView(report);
+            reportView.Show();
         }
 
         private void ReportByManagers_Click(object sender, RoutedEventArgs e)
         {
-            //ReportByManagersForm report = new ReportByManagersForm();
-            //report.Show();
+            var label = new DevExpress.XtraReports.UI.XRLabel()
+            {
+                Text = resourseManager.GetString("ReportByManagers", _currentCulture)
+            };
+
+            ReportByManagers report = new ReportByManagers();
+            report.label1 = label;
+            ReportsView reportView = new ReportsView(report);
+            reportView.Show();
         }
 
         private void ReportByWorkers_Click(object sender, RoutedEventArgs e)
         {
+            var label = new DevExpress.XtraReports.UI.XRLabel()
+            {
+                Text = resourseManager.GetString("ReportByWorkers", _currentCulture)
+            };
 
+            ReportByWorkers report = new ReportByWorkers();
+            report.label1 = label;
+            ReportsView reportView = new ReportsView(report);
+            reportView.Show();
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

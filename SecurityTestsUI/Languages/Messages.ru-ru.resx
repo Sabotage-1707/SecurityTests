@@ -267,6 +267,15 @@
   <data name="RegisterViewErrorMessage" xml:space="preserve">
     <value>Ошибка! Попробуте снова.</value>
   </data>
+  <data name="ReportByEmployees" xml:space="preserve">
+    <value>Отчет по работникам</value>
+  </data>
+  <data name="ReportByManagers" xml:space="preserve">
+    <value>Отчет по менеджерам</value>
+  </data>
+  <data name="ReportByWorkers" xml:space="preserve">
+    <value>Отчет по рабочим</value>
+  </data>
   <data name="ReportsTab" xml:space="preserve">
     <value>Отчеты</value>
   </data>

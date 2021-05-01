@@ -267,6 +267,15 @@
   <data name="RegisterViewErrorMessage" xml:space="preserve">
     <value>Error! Try again.</value>
   </data>
+  <data name="ReportByEmployees" xml:space="preserve">
+    <value>Report By Employees</value>
+  </data>
+  <data name="ReportByManagers" xml:space="preserve">
+    <value>Report By Managers</value>
+  </data>
+  <data name="ReportByWorkers" xml:space="preserve">
+    <value>Report By Workers</value>
+  </data>
   <data name="ReportsTab" xml:space="preserve">
     <value>Reports</value>
   </data>

@@ -511,6 +511,33 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Report By Employees.
+        /// </summary>
+        internal static string ReportByEmployees {
+            get {
+                return ResourceManager.GetString("ReportByEmployees", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Report By Managers.
+        /// </summary>
+        internal static string ReportByManagers {
+            get {
+                return ResourceManager.GetString("ReportByManagers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Report By Workers.
+        /// </summary>
+        internal static string ReportByWorkers {
+            get {
+                return ResourceManager.GetString("ReportByWorkers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Reports.
         /// </summary>
         internal static string ReportsTab {

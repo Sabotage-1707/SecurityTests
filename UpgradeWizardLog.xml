@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\SecurityTestsUI.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\App.config" />
+  <event action="Analyze" type="Success" name="Messages.en-us.resx" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\Languages\Messages.en-us.resx" />
+  <event action="Analyze" type="Success" name="Messages.resx" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\Languages\Messages.resx" />
+  <event action="Analyze" type="Success" name="Messages.ru-ru.resx" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\Languages\Messages.ru-ru.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="SecurityTestsUI" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI\SecurityTestsUI.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI.Library\SecurityTestsUI.Library.csproj" />
+  <event action="Analyze" type="Success" name="SecurityTestsUI.Library" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTestsUI.Library\SecurityTestsUI.Library.csproj" />
+  <event action="Analyze" type="Success" name="SecurityTests1" path="C:\Users\hachimon\source\repos\SecurityTests1\SecurityTests1.sln" />
+</log>

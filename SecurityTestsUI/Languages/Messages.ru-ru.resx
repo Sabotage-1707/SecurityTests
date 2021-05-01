@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>АККАУНТ</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AddQuestionButtonText" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AddQuestionTab" xml:space="preserve">
+    <value>Добавить Вопрос</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>АДМИН</value>
+  </data>
+  <data name="AdminRoles" xml:space="preserve">
+    <value>Выбирите роль для которой будет показан этот вопрос</value>
+  </data>
+  <data name="AllQuestoinsLabel" xml:space="preserve">
+    <value>Все вопросы:</value>
+  </data>
+  <data name="AnswerDeletedSuccess" xml:space="preserve">
+    <value>Ответ успешно удален</value>
+  </data>
+  <data name="AnswersTab" xml:space="preserve">
+    <value>Ответы</value>
+  </data>
+  <data name="BackButton" xml:space="preserve">
+    <value>Вернуться к окну для входа</value>
+  </data>
+  <data name="CorrectAnswersLabel" xml:space="preserve">
+    <value>Правильных ответов:</value>
+  </data>
+  <data name="CorrectAnswersPercentsLabel" xml:space="preserve">
+    <value>Процент правильных ответов:</value>
+  </data>
+  <data name="CounterOfUsedTries" xml:space="preserve">
+    <value>Количество прохождений:</value>
+  </data>
+  <data name="CurrentLanguage" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DatePicker" xml:space="preserve">
+    <value>Введите дату рождения</value>
+  </data>
+  <data name="DateTimeOfLastTryByFireSafetyLabel" xml:space="preserve">
+    <value>Последняя попытка по пожар.без.</value>
+  </data>
+  <data name="DateTimeOfLastTryByIndustrialSafetyLabel" xml:space="preserve">
+    <value>Последняя попытка по промыш.без.</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="EmployeesReport" xml:space="preserve">
+    <value>Показать отчет по работникам</value>
+  </data>
+  <data name="EnterCounter" xml:space="preserve">
+    <value>Использованные попытки</value>
+  </data>
+  <data name="EnterRoleName" xml:space="preserve">
+    <value>Введите название роли </value>
+  </data>
+  <data name="EnterType" xml:space="preserve">
+    <value>Введите тип</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>ВЫХОД</value>
+  </data>
+  <data name="ExitButton" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="FieldsAreNotFilled" xml:space="preserve">
+    <value>Не все поля были заполнены</value>
+  </data>
+  <data name="FireSafetyTestButton" xml:space="preserve">
+    <value>Пройти тест по пожарной безопастности</value>
+  </data>
+  <data name="FirstAnswerTextBox" xml:space="preserve">
+    <value>Введите первый ответ</value>
+  </data>
+  <data name="FourthAnswerTextBox" xml:space="preserve">
+    <value>Введите четвертый ответ</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="IncorrectData" xml:space="preserve">
+    <value>Поля заполнены не корректно</value>
+  </data>
+  <data name="IndustrialSafetyTestButton" xml:space="preserve">
+    <value>Пройти тест по промышленной безопастности</value>
+  </data>
+  <data name="IsCorrectAnswer" xml:space="preserve">
+    <value>Он правильный</value>
+  </data>
+  <data name="LogInButton" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="LoginViewDescriptionLabel" xml:space="preserve">
+    <value>Вход Пользователя</value>
+  </data>
+  <data name="LoginViewErrorMessage" xml:space="preserve">
+    <value>Некорректные данные, пожалуйста попробуйте снова...</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="LongTime" xml:space="preserve">
+    <value>Истекло время ожидания сервера</value>
+  </data>
+  <data name="MainViewDescriptionLabel" xml:space="preserve">
+    <value>Добро пожаловать в приложение Security Tests</value>
+  </data>
+  <data name="ManagersReport" xml:space="preserve">
+    <value>Показать отчет по управляющим</value>
+  </data>
+  <data name="NextButtonText" xml:space="preserve">
+    <value>СЛЕДУЮЩИЙ</value>
+  </data>
+  <data name="NonVereficated" xml:space="preserve">
+    <value>Не верефицирован</value>
+  </data>
+  <data name="OutOf" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="PasswordBoxText" xml:space="preserve">
+    <value>********</value>
+  </data>
+  <data name="QuestionAddSuccess" xml:space="preserve">
+    <value>Новый вопрос успешно добавлен.</value>
+  </data>
+  <data name="QuestionDeletedSuccess" xml:space="preserve">
+    <value>Вопрос успешно удален</value>
+  </data>
+  <data name="QuestionsTab" xml:space="preserve">
+    <value>Вопросы</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Зарегистрировать</value>
+  </data>
+  <data name="RegisterTooltip" xml:space="preserve">
+    <value>Зарегистрировать нового пользователя</value>
+  </data>
+  <data name="RegisterViewDescriptionLabel" xml:space="preserve">
+    <value>Регистрация Пользователя</value>
+  </data>
+  <data name="RegisterViewErrorMessage" xml:space="preserve">
+    <value>Ошибка! Попробуте снова.</value>
+  </data>
+  <data name="ReportsTab" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="ResetButton" xml:space="preserve">
+    <value>Стереть</value>
+  </data>
+  <data name="ResetTooltip" xml:space="preserve">
+    <value>Стереть все поля</value>
+  </data>
+  <data name="RoleAddSuccess" xml:space="preserve">
+    <value>Роль успешно добавлена</value>
+  </data>
+  <data name="RoleDeletedSuccess" xml:space="preserve">
+    <value>Роль успешно удалена</value>
+  </data>
+  <data name="RoleNameAreNotFilled" xml:space="preserve">
+    <value>Поле название роли не заполнено</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Выбирите Роль</value>
+  </data>
+  <data name="RolesTab" xml:space="preserve">
+    <value>Роли</value>
+  </data>
+  <data name="SecondAnswerTextBox" xml:space="preserve">
+    <value>Введите второй ответ</value>
+  </data>
+  <data name="SignUpButton" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>Вы успешно были зарегистрированы</value>
+  </data>
+  <data name="SuccessUpdate" xml:space="preserve">
+    <value>Ваш аккаунт был успешно обновлён!</value>
+  </data>
+  <data name="TestResultsLabel" xml:space="preserve">
+    <value>Ваши результаты по тесту</value>
+  </data>
+  <data name="Tests" xml:space="preserve">
+    <value>ТЕСТЫ</value>
+  </data>
+  <data name="TextBoxEmail" xml:space="preserve">
+    <value>Введите Почту</value>
+  </data>
+  <data name="TextBoxName" xml:space="preserve">
+    <value>Введите Имя</value>
+  </data>
+  <data name="TextBoxQuestion" xml:space="preserve">
+    <value>Введите вопрос</value>
+  </data>
+  <data name="TextBoxUserName" xml:space="preserve">
+    <value>Введите Никнейм</value>
+  </data>
+  <data name="TextBoxUserPassword" xml:space="preserve">
+    <value>Введите Пароль</value>
+  </data>
+  <data name="ThirdAnswerTextBox" xml:space="preserve">
+    <value>Введите третий ответ</value>
+  </data>
+  <data name="TypeAddSuccess" xml:space="preserve">
+    <value>Тип вопроса успешно добавлен</value>
+  </data>
+  <data name="TypeAreNotFilled" xml:space="preserve">
+    <value>Поле тип не заполнено</value>
+  </data>
+  <data name="TypeDeletedSuccess" xml:space="preserve">
+    <value>Тип вопроса успешно  удалён</value>
+  </data>
+  <data name="TypesOfQuestion" xml:space="preserve">
+    <value>Выбирите тип вопроса</value>
+  </data>
+  <data name="TypesTab" xml:space="preserve">
+    <value>Типы вопросов</value>
+  </data>
+  <data name="UpdateAccountButton" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="UpdateAccountSuccess" xml:space="preserve">
+    <value>Данные вашего акканута были успешно изменены</value>
+  </data>
+  <data name="UpdateAnswerSuccess" xml:space="preserve">
+    <value>Ответ успешно обновлен</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="UpdateQuestionSuccess" xml:space="preserve">
+    <value>Вопрос успешно обновлён</value>
+  </data>
+  <data name="UpdateRoleSuccess" xml:space="preserve">
+    <value>Роль успешно обнавлена</value>
+  </data>
+  <data name="UpdateTypeSuccess" xml:space="preserve">
+    <value>Тип вопроса успешно обновлён</value>
+  </data>
+  <data name="UpdateUserSuccess" xml:space="preserve">
+    <value>Пользователь успешно обновлён</value>
+  </data>
+  <data name="UpdateWindow" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="UserAddSuccess" xml:space="preserve">
+    <value>Пользователь успешно добавлен</value>
+  </data>
+  <data name="UserDeletedSuccess" xml:space="preserve">
+    <value>Пользователь был успешно удален</value>
+  </data>
+  <data name="UserHaventPassedYet" xml:space="preserve">
+    <value>Еще не проходил</value>
+  </data>
+  <data name="UsersTab" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+  <data name="Vereficated" xml:space="preserve">
+    <value>Верефицирован</value>
+  </data>
+  <data name="VereficatedByFireSafety" xml:space="preserve">
+    <value>Верефицирован по пож.без.</value>
+  </data>
+  <data name="VereficatedByIndustrialSafety" xml:space="preserve">
+    <value>Верефицирован по пром.без.</value>
+  </data>
+  <data name="VereficationStatusByFireSafety" xml:space="preserve">
+    <value>Пожарная безопасность:</value>
+  </data>
+  <data name="VereficationStatusByIndustrialSafety" xml:space="preserve">
+    <value>Промышленная безопасность:</value>
+  </data>
+  <data name="WorkersReport" xml:space="preserve">
+    <value>Показать отчет по рабочим</value>
+  </data>
+</root>

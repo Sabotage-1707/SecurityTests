@@ -188,39 +188,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Support\de_search\0xu0031.json" />
-    <None Include="Support\de_search\0xu0032.json" />
-    <None Include="Support\de_search\0xu0033.json" />
-    <None Include="Support\de_search\0xu0034.json" />
-    <None Include="Support\de_search\0xu0045.json" />
-    <None Include="Support\de_search\0xu0053.json" />
-    <None Include="Support\de_search\0xu0054.json" />
-    <None Include="Support\de_search\0xu0410.json" />
-    <None Include="Support\de_search\0xu0411.json" />
-    <None Include="Support\de_search\0xu0412.json" />
-    <None Include="Support\de_search\0xu0413.json" />
-    <None Include="Support\de_search\0xu0414.json" />
-    <None Include="Support\de_search\0xu0415.json" />
-    <None Include="Support\de_search\0xu0416.json" />
-    <None Include="Support\de_search\0xu0417.json" />
-    <None Include="Support\de_search\0xu0418.json" />
-    <None Include="Support\de_search\0xu041a.json" />
-    <None Include="Support\de_search\0xu041c.json" />
-    <None Include="Support\de_search\0xu041d.json" />
-    <None Include="Support\de_search\0xu041e.json" />
-    <None Include="Support\de_search\0xu041f.json" />
-    <None Include="Support\de_search\0xu0420.json" />
-    <None Include="Support\de_search\0xu0421.json" />
-    <None Include="Support\de_search\0xu0422.json" />
-    <None Include="Support\de_search\0xu0423.json" />
-    <None Include="Support\de_search\0xu0424.json" />
-    <None Include="Support\de_search\0xu0426.json" />
-    <None Include="Support\de_search\0xu0427.json" />
-    <None Include="Support\de_search\0xu042d.json" />
-    <None Include="Support\de_search\0xu042f.json" />
-    <None Include="Support\de_search\ids.json" />
-    <None Include="Support\de_search\prefixes.json" />
-    <None Include="Support\drex_file_list" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -274,40 +241,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Support\avtorizatsiya.htm" />
-    <Content Include="Support\css\all.css" />
-    <Content Include="Support\css\printed.css" />
-    <Content Include="Support\custom.css" />
-    <Content Include="Support\de_style.css" />
-    <Content Include="Support\dlya_administratora.htm" />
-    <Content Include="Support\dlya_polzovatelya.htm" />
-    <Content Include="Support\dobavlenie_dannykh_v_bazu_dannykh.htm" />
-    <Resource Include="Support\drex_header_custom.png" />
-    <Resource Include="Support\drex_index_custom.png" />
-    <Content Include="Support\index.htm" />
-    <Content Include="Support\izmenenie_dannykh_v_baze_dannykh.htm" />
-    <Resource Include="Support\i\blocks\interface-icons\delicious_logo.png" />
-    <Resource Include="Support\i\blocks\interface-icons\digg-button.png" />
-    <Resource Include="Support\i\blocks\interface-icons\interface-icons-sprite-8.png" />
-    <Resource Include="Support\i\blocks\interface-icons\interface-icons-sprite.png" />
-    <Resource Include="Support\i\blocks\search\loading.gif" />
-    <Resource Include="Support\i\blocks\tree\sprite.png" />
-    <Resource Include="Support\i\null.gif" />
-    <Content Include="Support\js\all.js" />
-    <Content Include="Support\js\all2.js" />
-    <Content Include="Support\js\drexplain.data.index.js" />
-    <Content Include="Support\js\oembed.js" />
-    <Content Include="Support\js\socialscript.js" />
-    <Content Include="Support\js\tooltips.js" />
-    <Content Include="Support\obnovlenie_okna.htm" />
-    <Content Include="Support\obshchij.htm" />
-    <Content Include="Support\prosmotr_otchetov.htm" />
-    <Content Include="Support\prosmotr___izmenenie_dannykh_akkaunta.htm" />
-    <Content Include="Support\registratsiya.htm" />
-    <Content Include="Support\russkaya_versiya.htm" />
-    <Content Include="Support\smena_yazyka_intefejsa.htm" />
-    <Content Include="Support\udalenie_dannykh_v_baze_dannykh.htm" />
-    <Content Include="Support\verifikatsiya.htm" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

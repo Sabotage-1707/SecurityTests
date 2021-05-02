@@ -129,5 +129,10 @@ namespace SecurityTestsUI
             FillAllFields(culture);
             CurrentLanguage.Text = "РУ";
         }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Support.chm");
+        }
     }
 }

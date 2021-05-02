@@ -21,10 +21,10 @@
         <StackPanel Orientation="Horizontal">
             <StackPanel Width="350">
                 <Image Source="/Images/ICON4801.png" Width="300" Height="300" VerticalAlignment="Top" Margin="30 30 30 0" Stretch="Fill" />
-                <StackPanel Width="100" HorizontalAlignment="Left" Margin="70 0 0 0">
-                    <Menu Width="100" Background="#100E17" Foreground="White">
+                <StackPanel MinWidth="150" HorizontalAlignment="Left" Margin="70 0 0 0" Orientation="Horizontal">
+                    <Menu MinWidth="150" Background="#100E17" Foreground="White">
 
-                        <MenuItem Width="140" Style="{StaticResource MaterialDesignMenuItem}" HorizontalAlignment="Left">
+                        <MenuItem Style="{StaticResource MaterialDesignMenuItem}" HorizontalAlignment="Left">
                             <MenuItem.Header>
                                 <StackPanel  Orientation="Horizontal">
                                     <materialDesign:PackIcon Kind="Language" Foreground="White" BorderBrush="White" Width="30" Height="30" />
@@ -34,7 +34,15 @@
                             <MenuItem Width="100" Header="EN" Foreground="White" Style="{StaticResource MaterialDesignMenuItem}" Click="EnglishLanguage_Click"/>
                             <MenuItem Width="100" Header="РУ" Foreground="White" Style="{StaticResource MaterialDesignMenuItem}" Click="RussianLanguage_Click"/>
                         </MenuItem>
+                        <MenuItem  Style="{StaticResource MaterialDesignMenuItem}" Click="Help_Click">
+                            <MenuItem.Header>
+                                <StackPanel  Orientation="Horizontal">
+                                    <materialDesign:PackIcon  Kind="PersonHelp" Foreground="White" BorderBrush="White" Width="30" Height="30" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                        </MenuItem>
                     </Menu>
+                    
                 </StackPanel>
             </StackPanel>
             

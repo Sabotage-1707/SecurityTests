@@ -50,10 +50,10 @@
                         <TextBox x:Name="Name" Margin="10 0" materialDesign:HintAssist.Hint="Enter Name" Foreground="OrangeRed" Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Cursor="IBeam" />
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Width="100" HorizontalAlignment="Left" Margin="0 10 0 0">
-                    <Menu Width="100" Background="#100E17" Foreground="White">
+                <StackPanel MinWidth="100" HorizontalAlignment="Left" Margin="0 10 0 0" Orientation="Horizontal">
+                    <Menu MinWidth="100" Background="#100E17" Foreground="White" >
 
-                        <MenuItem Width="140" Style="{StaticResource MaterialDesignMenuItem}" HorizontalAlignment="Left">
+                        <MenuItem  Style="{StaticResource MaterialDesignMenuItem}" HorizontalAlignment="Left">
                             <MenuItem.Header>
                                 <StackPanel  Orientation="Horizontal">
                                     <materialDesign:PackIcon Kind="Language" Foreground="White" BorderBrush="White" Width="30" Height="30" />
@@ -62,6 +62,13 @@
                             </MenuItem.Header>
                             <MenuItem  Width="100" Header="EN" Foreground="White" Style="{StaticResource MaterialDesignMenuItem}" Click="EnglishLanguage_Click"/>
                             <MenuItem Width="100" Header="РУ" Foreground="White" Style="{StaticResource MaterialDesignMenuItem}" Click="RussianLanguage_Click"/>
+                        </MenuItem>
+                        <MenuItem  Style="{StaticResource MaterialDesignMenuItem}" Click="Help_Click">
+                            <MenuItem.Header>
+                                <StackPanel  Orientation="Horizontal">
+                                    <materialDesign:PackIcon  Kind="PersonHelp" Foreground="White" BorderBrush="White" Width="30" Height="30" />
+                                </StackPanel>
+                            </MenuItem.Header>
                         </MenuItem>
                     </Menu>
                 </StackPanel>

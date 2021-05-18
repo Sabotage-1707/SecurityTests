@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using Caliburn.Micro;
 using System.Collections.ObjectModel;
 using SecurityTestsUI.Reports;
+using System.Threading;
 
 namespace SecurityTestsUI
 {
@@ -180,9 +181,6 @@ namespace SecurityTestsUI
             MaterialDesignThemes.Wpf.HintAssist.SetHint(RoleName, resourseManager.GetString("EnterRoleName", culture));
             MaterialDesignThemes.Wpf.HintAssist.SetHint(TypeName, resourseManager.GetString("EnterType", culture));
 
-
-
-
             MaterialDesignThemes.Wpf.HintAssist.SetHint(Answer1, resourseManager.GetString("FirstAnswerTextBox", culture));
             MaterialDesignThemes.Wpf.HintAssist.SetHint(Answer2, resourseManager.GetString("SecondAnswerTextBox", culture));
             MaterialDesignThemes.Wpf.HintAssist.SetHint(Answer3, resourseManager.GetString("ThirdAnswerTextBox", culture));
@@ -192,7 +190,6 @@ namespace SecurityTestsUI
             IsAnswer2Correct.Content = resourseManager.GetString("IsCorrectAnswer", culture);
             IsAnswer3Correct.Content = resourseManager.GetString("IsCorrectAnswer", culture);
             IsAnswer4Correct.Content = resourseManager.GetString("IsCorrectAnswer", culture);
-
 
             AddQuestionButtonText.Text = resourseManager.GetString("AddQuestionButtonText", culture);
             AddUserButton.Text = resourseManager.GetString("AddButton", culture);
@@ -213,8 +210,6 @@ namespace SecurityTestsUI
             UpdateTypeButton.Text = resourseManager.GetString("UpdateButton", culture);
             DeleteTypeButton.Text = resourseManager.GetString("DeleteButton", culture);
 
-        
-
             ReportByEmployees.Content = resourseManager.GetString("EmployeesReport", culture);
             ReportByManagers.Content = resourseManager.GetString("ManagersReport", culture);
             ReportByWorkers.Content = resourseManager.GetString("WorkersReport", culture);
@@ -223,51 +218,27 @@ namespace SecurityTestsUI
 
         private void ReportByEmployees_Click(object sender, RoutedEventArgs e)
         {
-            var label = new DevExpress.XtraReports.UI.XRLabel() {
-                Text = resourseManager.GetString("ReportByEmployees", _currentCulture)
-            };
-            
             ReportByEmployees report = new ReportByEmployees();
-            report.label1 = label;
             ReportsView reportView = new ReportsView(report);
             reportView.Show();
         }
-
+        
         private void ReportByManagers_Click(object sender, RoutedEventArgs e)
         {
-            var label = new DevExpress.XtraReports.UI.XRLabel()
-            {
-                Text = resourseManager.GetString("ReportByManagers", _currentCulture)
-            };
-
-            ReportByManagers report = new ReportByManagers();
-            report.label1 = label;
+            ReportByManagers report = new ReportByManagers();            
             ReportsView reportView = new ReportsView(report);
             reportView.Show();
         }
 
-        private void ReportByWorkers_Click(object sender, RoutedEventArgs e)
+        private  void ReportByWorkers_Click(object sender, RoutedEventArgs e)
         {
-            var label = new DevExpress.XtraReports.UI.XRLabel()
-            {
-                Text = resourseManager.GetString("ReportByWorkers", _currentCulture)
-            };
-
             ReportByWorkers report = new ReportByWorkers();
-            report.label1 = label;
             ReportsView reportView = new ReportsView(report);
             reportView.Show();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void FireSafety_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e){}
+        private void FireSafety_Checked(object sender, RoutedEventArgs e){}
 
         private void UpdateUser_Click(object sender, RoutedEventArgs e)
         {
@@ -275,7 +246,6 @@ namespace SecurityTestsUI
             {
                 try
                 {
-
                     var user = UsersDataGrid.SelectedItem as User;
                     DataAccess db = new DataAccess();
                     db.UpdateUser(user.Id, user.UserName, user.UserPassword, user.RoleId, user.Name, user.EmailAddress,
@@ -402,7 +372,7 @@ namespace SecurityTestsUI
                 {
                     var question = QuestionsDataGrid.SelectedItem as Questions;
                     DataAccess db = new DataAccess();
-                    db.DeleteAnswer(question.Id);
+                    db.DeleteQuestion(question.Id);
                     ShowSuccess(QuestionsErrorMessage, QuestionsErrorSeparator, "QuestionDeletedSuccess");
 
                 }

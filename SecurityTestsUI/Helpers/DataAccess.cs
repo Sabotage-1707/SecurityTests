@@ -116,7 +116,7 @@ namespace SecurityTestsUI
             {
                 throw new ArgumentNullException();
             }
-            string format = "dd-MM-yyyy";
+            string format = "MM-dd-yyyy";
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 db.Query($"Insert into Users(UserName,UserPassword, RoleId, VereficationStatusByFireSafety, VereficationStatusByIndustrialSafety, Name, EmailAddress, Birthday,CounterOfUsedTries, DateTimeOfLastTryByFireSafety, DateTimeOfLastTryByIndustrialSafety) values (N'{userName}',N'{userPassword}', {roleId}, 0, 0, N'{name}', N'{emailAddress}', '{birthday.ToString(format)}',0,null,null)");
@@ -132,7 +132,7 @@ namespace SecurityTestsUI
         
             var st2 = VereficationStatusByIndustrialSafety == true ? 1 : 0;
 
-            string format = "dd-MM-yyyy";
+            string format = "MM-dd-yyyy";
 
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
@@ -196,7 +196,7 @@ namespace SecurityTestsUI
             {
                 throw new ArgumentNullException();
             }
-            string format = "dd-MM-yyyy";
+            string format = "MM-dd-yyyy";
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 var sqlQuery = $"Update Users Set UserName = N'{userName}',UserPassword = N'{userPassword}', RoleId = {roleId}, Name = N'{name}', EmailAddress = N'{emailAddress}', Birthday = '{birthday.ToString(format)}' where Id = {userId}";
@@ -214,7 +214,7 @@ namespace SecurityTestsUI
             var date2 = "";
 
 
-            string formatDateTime = "dd-MM-yyyy hh:mm:ss";
+            string formatDateTime = "MM-dd-yyyy hh:mm:ss";
 
             var sqlQuery = "";
 
@@ -410,9 +410,11 @@ namespace SecurityTestsUI
                 throw new ArgumentNullException();
             }
 
+            var st1 = isCorrect == true ? 1 : 0;
+
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
-                db.Query($"Insert into Answers(Answer,IsCorrect, QuestionId) values (N'{answer}',{isCorrect}, {questionId})");
+                db.Query($"Insert into Answers(Answer,IsCorrect, QuestionId) values (N'{answer}',{st1}, {questionId})");
             }
         }
         public void CreateRole(string roleName)
@@ -455,7 +457,7 @@ namespace SecurityTestsUI
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 DateTime time = DateTime.Now;
-                string format = "dd-MM-yyyy hh:mm:ss";
+                string format = "yyyy-MM-dd hh:mm:ss";
                 var sqlQuery = $"Update Users Set CounterOfUsedTries = {user.CounterOfUsedTries+1},DateTimeOfLastTryByFireSafety='{ time.ToString(format) }'  where Id = {user.Id}";
                 db.Execute(sqlQuery);
             }
@@ -469,7 +471,7 @@ namespace SecurityTestsUI
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 DateTime time = DateTime.Now;
-                string format = "dd-MM-yyyy hh:mm:ss";
+                string format = "yyyy-MM-dd hh:mm:ss";
                 var sqlQuery = $"Update Users Set CounterOfUsedTries = {user.CounterOfUsedTries + 1}, DateTimeOfLastTryByIndustrialSafety ='{time.ToString(format)}'  where Id = {user.Id}";
                 db.Execute(sqlQuery);
             }
@@ -508,30 +510,6 @@ namespace SecurityTestsUI
                 var date = DateTime.UtcNow.AddDays(-1);
                 var result = DateTime.Compare(date, DateTime.Parse(output.ToString()));
                 return result >= 0;
-            }
-        }
-
-        public List<User> GetAllManagers(DateTime from, DateTime To)
-        {
-            using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
-            {
-                string format = "dd-MM-yyyy hh:mm:ss";
-                var output = db.Query<User>($"set dateformat dmy " +
-                                        $"exec GetAllManagers '{from.ToString(format)}','{To.ToString(format)}'").ToList();
-                
-                return output;
-            }
-        }
-
-        public List<User> GetAllEmployees(DateTime from, DateTime To)
-        {
-            using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
-            {
-                string format = "dd-MM-yyyy hh:mm:ss";
-                var output = db.Query<User>($"set dateformat dmy " +
-                                        $"exec GetAllEmployees '{from.ToString(format)}','{To.ToString(format)}'").ToList();
-
-                return output;
             }
         }
 

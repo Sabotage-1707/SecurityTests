@@ -138,7 +138,6 @@ namespace SecurityTestsUI
             try
             {
                 //загружаем ответы исходя из роли пользователя
-
                 _allQuestions = db.LoadQuestionsByRole(_currentUser, typeQuestions);
 
                 FillQuestionAndAnswerAreas(db, rnd);
@@ -152,7 +151,7 @@ namespace SecurityTestsUI
                 Console.WriteLine(ex.Message);
 
             }
-            
+
         }
 
         private void SwitchShowedNumbersOfQuestions()
@@ -332,51 +331,57 @@ namespace SecurityTestsUI
 
         private void CalculationResults()
         {
-            AllQuestoinsResultsArea.Text = _allQuestions.Count.ToString();
-
-            CorrectAnswersResultsArea.Text = _correctAnswers.Count.ToString();
-
-            var percent = ((double)_correctAnswers.Count / _userUsedAnswers.Count) * 100.0;
-
-            CorrectAnswersPercentsResultsArea.Text = (Math.Round(percent,2)).ToString() + "%";
-            DataAccess db = new DataAccess();
-
-            
-
-            switch (_currentTypeOfQuestion)
+            try
             {
-                case 1:
-                    db.UserTryFireSafetyTest(_currentUser);
-                    if (percent < 85)
-                    {
-                        VereficationStatusByFireSafetyResultsArea.Text = resourseManager.GetString("NonVereficated", _currentCulture); ;
-                        VereficationStatusByFireSafetyResultsArea.Foreground = Brushes.Red;
-                    }
-                    else
-                    {
-                        db.VereficateUserByFireSafety(_currentUser);
+                AllQuestoinsResultsArea.Text = _allQuestions.Count.ToString();
 
-                        VereficationStatusByFireSafetyResultsArea.Text = resourseManager.GetString("Vereficated", _currentCulture); ;
-                        VereficationStatusByFireSafetyResultsArea.Foreground = Brushes.LimeGreen;
-                    }
-                    break;
+                CorrectAnswersResultsArea.Text = _correctAnswers.Count.ToString();
 
-                case 2:
+                var percent = ((double)_correctAnswers.Count / _userUsedAnswers.Count) * 100.0;
 
-                    if (percent < 85)
-                    {
-                        VereficationStatusByIndustrialSafetyResultsArea.Text = resourseManager.GetString("NonVereficated", _currentCulture); ;
-                        VereficationStatusByIndustrialSafetyResultsArea.Foreground = Brushes.Red;
-                    }
-                    else
-                    {
-                        db.VereficateUserByindustrialSafety(_currentUser);
+                CorrectAnswersPercentsResultsArea.Text = (Math.Round(percent,2)).ToString() + "%";
+                DataAccess db = new DataAccess();
 
-                        VereficationStatusByIndustrialSafetyResultsArea.Text = resourseManager.GetString("Vereficated", _currentCulture); ;
-                        VereficationStatusByIndustrialSafetyResultsArea.Foreground = Brushes.LimeGreen;
-                    }
-                    break;
 
+
+                switch (_currentTypeOfQuestion)
+                {
+                    case 1:
+                        db.UserTryFireSafetyTest(_currentUser);
+                        if (percent < 85)
+                        {
+                            VereficationStatusByFireSafetyResultsArea.Text = resourseManager.GetString("NonVereficated", _currentCulture); ;
+                            VereficationStatusByFireSafetyResultsArea.Foreground = Brushes.Red;
+                        }
+                        else
+                        {
+                            db.VereficateUserByFireSafety(_currentUser);
+
+                            VereficationStatusByFireSafetyResultsArea.Text = resourseManager.GetString("Vereficated", _currentCulture); ;
+                            VereficationStatusByFireSafetyResultsArea.Foreground = Brushes.LimeGreen;
+                        }
+                        break;
+
+                    case 2:
+
+                        if (percent < 85)
+                        {
+                            VereficationStatusByIndustrialSafetyResultsArea.Text = resourseManager.GetString("NonVereficated", _currentCulture); ;
+                            VereficationStatusByIndustrialSafetyResultsArea.Foreground = Brushes.Red;
+                        }
+                        else
+                        {
+                            db.VereficateUserByindustrialSafety(_currentUser);
+
+                            VereficationStatusByIndustrialSafetyResultsArea.Text = resourseManager.GetString("Vereficated", _currentCulture); ;
+                            VereficationStatusByIndustrialSafetyResultsArea.Foreground = Brushes.LimeGreen;
+                        }
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void ResultsAreaShow()

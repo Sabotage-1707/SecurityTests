@@ -136,12 +136,12 @@
 
             <StackPanel x:Name="VereficationStatusByFireSafetyArea" Orientation="Horizontal" Margin="30 50 0 0" Visibility="Collapsed">
                 <TextBlock x:Name="VereficationStatusByFireSafetyResultsAreaLabel" Text="Verefication Status:" Foreground="White" HorizontalAlignment="Left" FontSize="26" ></TextBlock>
-                <TextBlock x:Name="VereficationStatusByFireSafetyResultsArea" Foreground="White" Text="9" FontSize="26" Margin="30 0 0 0" />
+                <TextBlock x:Name="VereficationStatusByFireSafetyResultsArea" Foreground="Red" Text="NonVerificated" FontSize="26" Margin="30 0 0 0" />
             </StackPanel>
 
             <StackPanel x:Name="VereficationStatusByIndustrialSafetyArea" Orientation="Horizontal" Margin="30 50 0 0" Visibility="Collapsed">
                 <TextBlock x:Name="VereficationStatusByIndustrialSafetyResultsAreaLabel" Text="Verefication Status:" Foreground="White" HorizontalAlignment="Left" FontSize="26" ></TextBlock>
-                <TextBlock x:Name="VereficationStatusByIndustrialSafetyResultsArea" VerticalAlignment="Center" Foreground="White" Text="9" FontSize="26" Margin="30 0 0 0" />
+                <TextBlock x:Name="VereficationStatusByIndustrialSafetyResultsArea" VerticalAlignment="Center" Foreground="Red" Text="NonVerificated" FontSize="26" Margin="30 0 0 0" />
             </StackPanel>
 
 

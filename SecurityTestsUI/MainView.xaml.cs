@@ -166,9 +166,9 @@ namespace SecurityTestsUI
             UpdateWindow_Click(sender, e);
         }
 
-        private void Help_Click(object sender, RoutedEventArgs e)
+        private async void Help_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("Support.chm");
+            await Task.Run(() => System.Diagnostics.Process.Start("Support.chm"));
         }
     }
 }

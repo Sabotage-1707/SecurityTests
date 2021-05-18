@@ -208,9 +208,9 @@ namespace SecurityTestsUI
             CurrentLanguage.Text = "РУ";
         }
 
-        private void Help_Click(object sender, RoutedEventArgs e)
+        private async void Help_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("Support.chm");
+            await Task.Run(() => System.Diagnostics.Process.Start("Support.chm"));
         }
     }
 }

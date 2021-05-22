@@ -19,6 +19,7 @@ using Caliburn.Micro;
 using System.Collections.ObjectModel;
 using SecurityTestsUI.Reports;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace SecurityTestsUI
 {
@@ -62,18 +63,61 @@ namespace SecurityTestsUI
         private void InitializeDataGrids()
         {
             DataAccess db = new DataAccess();
+            
             Users = new ObservableCollection<User>(db.GetUsers());
             Answers = new ObservableCollection<Answers>(db.GetAnswers());
             RolesCollection = new ObservableCollection<Role>(db.GetRoles());
             Questions = new ObservableCollection<Questions>(db.GetQuestions());
             TypesOfQuestionCollection = new ObservableCollection<TypesOfQuestion>(db.GetTypes());
+
             UsersDataGrid.ItemsSource = Users;
             AnswersDataGrid.ItemsSource = Answers;
             QuestionsDataGrid.ItemsSource = Questions;
             RolesDataGrid.ItemsSource = RolesCollection;
             TypesDataGrid.ItemsSource = TypesOfQuestionCollection;
         }
+        //public List<Answers> GetAnswersRus()
+        //{
+        //    using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
+        //    {
+        //        var output = db.Query<Answers>($"select id as N'Ид', Answer as N'Ответ',IsCorrect as 'Верность', QuestionId as 'Ид Вопроса' from Answers").ToList();
+        //        return output;
+        //    }
+        //}
+        //public List<Questions> GetQuestionsRus()
+        //{
+        //    using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
+        //    {
+        //        var output = db.Query<Questions>($"select id as N'Ид',Question as N'Вопрос', RoleId as N'Ид Роли',RoleId as N'Ид Роли', TypeOfQuestionId as N'Ид Типа Вопроса' from Questions").ToList();
+        //        return output;
+        //    }
+        //}
+        //public List<TypesOfQuestion> GetTypesRus()
+        //{
+        //    using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
+        //    {
+        //        var output = db.Query<TypesOfQuestion>($"select id as N'Ид',Type as N'Тип' from TypesOfQuestion").ToList();
+        //        return output;
+        //    }
+        //}
+        //public List<Role> GetRolesRus()
+        //{
+        //    using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
+        //    {
+        //        var output = db.Query<Role>($"select id as N'Ид',RoleName as N'Название Роли' from Roles").ToList();
+        //        return output;
+        //    }
+        //}
+        //public List<User> GetUsersRus()
+        //{
+        //    using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
+        //    {
 
+        //        var output = db.Query<User>($"select id as N'Ид',UserName as N'Никнейм Пользователя',UserPassword as N'Пароль', RoleId as N'Ид Роли', Name as N'Имя Пользователя', EmailAddress as N'Почта', Birthday as N'Дата Рождения'," +
+        //            $"VereficationStatusByFireSafety as N'Статус верифицирования по пожарной бзопасности',VereficationStatusByIndustrialSafety as N'Статус верифицирования по промышленной бзопасности', CounterOfUsedTries as N'Количество Попыток Прохождения', DateTimeOfLastTryByFireSafety as N'Дата последнего прохождения верификации по пожарной безопасности', DateTimeOfLastTryByIndustrialSafety as N'Дата последнего прохождения верификации по промышленной безопасности' from Users").ToList();
+        //        return output;
+        //    }
+        //}
         private void ComboBoxes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CheckFields();
@@ -86,6 +130,7 @@ namespace SecurityTestsUI
         {
             DataAccess db = new DataAccess();
             var roles = new List<Role>();
+            
             try
             {
                 roles = db.LoadRoles();
@@ -214,6 +259,35 @@ namespace SecurityTestsUI
             ReportByManagers.Content = resourseManager.GetString("ManagersReport", culture);
             ReportByWorkers.Content = resourseManager.GetString("WorkersReport", culture);
 
+            UsersDataGridId.Header = resourseManager.GetString("Id", _currentCulture);
+            UsersDataGridUserName.Header = resourseManager.GetString("UserName", _currentCulture);
+            UsersDataGridUserPassword.Header = resourseManager.GetString("UserPassword", _currentCulture);
+            UsersDataGridRoleId.Header = resourseManager.GetString("RoleId", _currentCulture);
+            UsersDataGridName.Header = resourseManager.GetString("Name", _currentCulture);
+            UsersDataGridEmail.Header = resourseManager.GetString("EmailAddress", _currentCulture);
+            UsersDataGridBirthday.Header = resourseManager.GetString("Birhday", _currentCulture);
+            UsersDataGridFireSafety.Header = resourseManager.GetString("VereficationStatusByFireSafetyAdmin", _currentCulture);
+            UsersDataGridIndustrialSafety.Header = resourseManager.GetString("VereficationStatusByIndustrialSafetyAdmin", _currentCulture);
+            UsersDataGridFireSafetyTry.Header = resourseManager.GetString("DateTimeOfLastTryByFireSafety", _currentCulture);
+            UsersDataGridIndustrialSafetyTry.Header = resourseManager.GetString("DateTimeOfLastTryByIndustrialSafety", _currentCulture);
+            UsersDataGridCounterTries.Header = resourseManager.GetString("CounterOfUsedTries", _currentCulture);
+
+            AnswersDataGridId.Header = resourseManager.GetString("Id", _currentCulture);
+            AnswersDataGridAnswer.Header = resourseManager.GetString("Answer", _currentCulture);
+            AnswersDataGridQuestionId.Header = resourseManager.GetString("QuestionId", _currentCulture);
+            AnswersDataGridIsCorrect.Header = resourseManager.GetString("IsCorrectAnswer", _currentCulture);
+
+            QuestionsDataGridId.Header = resourseManager.GetString("Id", _currentCulture);
+            QuestionsDataGridQuestion.Header = resourseManager.GetString("Question", _currentCulture);
+            QuestionsDataGridRoleId.Header = resourseManager.GetString("RoleId", _currentCulture);
+            QuestionsDataGridTypeOfQuestionId.Header = resourseManager.GetString("TypeOfQuestionId", _currentCulture);
+
+            RolesDataGridId.Header = resourseManager.GetString("Id", _currentCulture);
+            RolesDataGridRoleName.Header = resourseManager.GetString("RoleName", _currentCulture);
+
+            TypesDataGridId.Header = resourseManager.GetString("Id", _currentCulture);
+            TypesDataGridType.Header = resourseManager.GetString("Type", _currentCulture);
+
         }
 
         private void ReportByEmployees_Click(object sender, RoutedEventArgs e)
@@ -248,8 +322,9 @@ namespace SecurityTestsUI
                 {
                     var user = UsersDataGrid.SelectedItem as User;
                     DataAccess db = new DataAccess();
+                    CheckEmail();
                     db.UpdateUser(user.Id, user.UserName, user.UserPassword, user.RoleId, user.Name, user.EmailAddress,
-                        user.Birthday,user.VereficationStatusByFireSafety, user.VereficationStatusByIndustrialSafety, user.CounterOfUsedTries,user.DateTimeOfLastTryByFireSafety, user.DateTimeOfLastTryByIndustrialSafety);
+                        user.Birthday, user.CounterOfUsedTries,user.DateTimeOfLastTryByFireSafety, user.DateTimeOfLastTryByIndustrialSafety);
                     ShowSuccess(UserErrorMessage, UserErrorSeparator, "UpdateUserSuccess");
                
                 }
@@ -263,7 +338,15 @@ namespace SecurityTestsUI
                 }
             }
         }
-
+        private void CheckEmail()
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(Email.Text);
+            if (!match.Success)
+            {
+                throw new Exception("incorrect email");
+            }
+        }
         private void AddUser_Click(object sender, RoutedEventArgs e)
         {
             try

@@ -55,7 +55,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Grid Height="70" VerticalAlignment="Top" Background="#2E333A" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
+        <Grid Height="75" VerticalAlignment="Top" Background="#2E333A" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
             <TextBlock x:Name="MainViewDescriptionLabel" Text="Welcome to Security Tests" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="White"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock x:Name="UserNameShowed" Text="UserName" Foreground="White" FontSize="20" VerticalAlignment="Center"/>
@@ -169,7 +169,7 @@
             
         </Grid>
 
-        <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding}"/>
+        <ContentControl  Grid.Column="1" Grid.Row="1" Content="{Binding}"/>
 
 
     </Grid>

@@ -71,10 +71,10 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid Background="#2E333A">
-        <StackPanel Margin="10 10">
+    <Grid Background="White">
+        <StackPanel >
             <TabControl Background="#2E333A" MinHeight="698">
-                <TabItem x:Name="AddQuestionTab" Header="Add Question" Style="{StaticResource MaterialDesignNavigationRailTabItem}"  Width="Auto" >
+                <TabItem x:Name="AddQuestionTab" Header="Add Question" Style="{StaticResource MaterialDesignNavigationRailTabItem}"   Width="Auto" >
                     <StackPanel  MinWidth="590" MinHeight="608" VerticalAlignment="Top" Margin="300 0 0 0">
                         <StackPanel Background="#2E333A" MinHeight="498" MinWidth="590" >
                             <StackPanel Orientation="Horizontal" Margin="10">
@@ -142,7 +142,7 @@
 
                     </StackPanel>
                 </TabItem>
-                <TabItem x:Name="ReportsTab" Header="Reports" Style="{DynamicResource MaterialDesignNavigationRailTabItem}" Width="Auto">
+                <TabItem x:Name="ReportsTab" Header="Reports" Style="{DynamicResource MaterialDesignNavigationRailTabItem}"  Width="Auto">
                     <StackPanel x:Name="Reports" Margin="0 20 0 0" Visibility="Visible">
 
 
@@ -189,15 +189,15 @@
                         </Grid.RowDefinitions>
                         <DataGrid x:Name="UsersDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}" MaxHeight="490"  SelectionChanged="DataGrid_SelectionChanged" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
-                                <DataGridTextColumn Header="UserName" Binding="{Binding Path=UserName}"/>
-                                <DataGridTextColumn Header="UserPassword" Binding="{Binding Path=UserPassword}"/>
-                                <DataGridTextColumn Header="RoleId" Binding="{Binding Path=RoleId}"/>
-                                <DataGridCheckBoxColumn Header="Verefication Status By Fire Safety" Binding="{Binding Path=VereficationStatusByFireSafety}"/>
-                                <DataGridCheckBoxColumn Header="Verefication Status By Industrial Safety" Binding="{Binding Path=VereficationStatusByIndustrialSafety}"/>
-                                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
-                                <DataGridTextColumn Header="EmailAddress" Binding="{Binding Path=EmailAddress}"/>
-                                <DataGridTemplateColumn Header="Birthday">
+                                <DataGridTextColumn x:Name="UsersDataGridId"  Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn x:Name="UsersDataGridUserName" Header="UserName" Binding="{Binding Path=UserName}"/>
+                                <DataGridTextColumn x:Name="UsersDataGridUserPassword" Header="UserPassword" Binding="{Binding Path=UserPassword}"/>
+                                <DataGridTextColumn x:Name="UsersDataGridRoleId" Header="RoleId" Binding="{Binding Path=RoleId}"/>
+                                <DataGridCheckBoxColumn x:Name="UsersDataGridFireSafety" Header="Verefication Status By Fire Safety" Binding="{Binding Path=VereficationStatusByFireSafety}" IsReadOnly="True"/>
+                                <DataGridCheckBoxColumn x:Name="UsersDataGridIndustrialSafety" Header="Verefication Status By Industrial Safety" Binding="{Binding Path=VereficationStatusByIndustrialSafety}" IsReadOnly="True"/>
+                                <DataGridTextColumn x:Name="UsersDataGridName" Header="Name" Binding="{Binding Path=Name}"/>
+                                <DataGridTextColumn x:Name="UsersDataGridEmail" Header="EmailAddress" Binding="{Binding Path=EmailAddress}"/>
+                                <DataGridTemplateColumn x:Name="UsersDataGridBirthday" Header="Birthday">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Path=Birthday,StringFormat=d}"/>
@@ -209,8 +209,8 @@
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellEditingTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTextColumn Header="Counter Of Used Tries" Binding="{Binding Path=CounterOfUsedTries}"/>
-                                <DataGridTemplateColumn Header="Last Try By Fire Safety">
+                                <DataGridTextColumn x:Name="UsersDataGridCounterTries" Header="Counter Of Used Tries" Binding="{Binding Path=CounterOfUsedTries}"/>
+                                <DataGridTemplateColumn x:Name="UsersDataGridFireSafetyTry" Header="Last Try By Fire Safety">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Path=DateTimeOfLastTryByFireSafety, StringFormat= 'MM /dd/yyyy HH:mm:ss'}"/>
@@ -222,7 +222,7 @@
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellEditingTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTemplateColumn Header="Last Try By Industrial Safety">
+                                <DataGridTemplateColumn x:Name="UsersDataGridIndustrialSafetyTry" Header="Last Try By Industrial Safety">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Path=DateTimeOfLastTryByIndustrialSafety, StringFormat= 'MM /dd/yyyy HH:mm:ss'}"/>
@@ -315,8 +315,13 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <DataGrid x:Name="AnswersDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="True" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
-                            
+                        <DataGrid x:Name="AnswersDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="AnswersDataGridId" Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn x:Name="AnswersDataGridAnswer" Header="Answer" Binding="{Binding Path=Answer}"/>
+                                <DataGridTextColumn x:Name="AnswersDataGridQuestionId" Header="QuestionId" Binding="{Binding Path=QuestionId}"/>
+                                <DataGridCheckBoxColumn x:Name="AnswersDataGridIsCorrect" Header="IsCorrect" Binding="{Binding Path=IsCorrect}"/>
+                            </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel  HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
                             <Button x:Name="DeleteAnswer" Margin="0 10 0 30" Background="Red" BorderBrush="Red" MinHeight="30" MinWidth="250" Click="DeleteAnswer_Click" >
@@ -356,8 +361,13 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <DataGrid x:Name="QuestionsDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="True" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
-
+                        <DataGrid x:Name="QuestionsDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="QuestionsDataGridId" Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn x:Name="QuestionsDataGridQuestion" Header="Question" Binding="{Binding Path=Question}"/>
+                                <DataGridTextColumn x:Name="QuestionsDataGridRoleId" Header="RoleId" Binding="{Binding Path=RoleId}"/>
+                                <DataGridTextColumn x:Name="QuestionsDataGridTypeOfQuestionId" Header="TypeOfQuestionId" Binding="{Binding Path=TypeOfQuestionId}"/>
+                            </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel  HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
                         <Button x:Name="DeleteQuestion" Margin="0 10 0 30" Background="Red" BorderBrush="Red" MinHeight="30" MinWidth="250" Click="DeleteQuestion_Click" >
@@ -399,8 +409,11 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <DataGrid x:Name="RolesDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="True" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
-
+                        <DataGrid x:Name="RolesDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="RolesDataGridId" Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn x:Name="RolesDataGridRoleName" Header="RoleName" Binding="{Binding Path=RoleName}"/>
+                            </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel  HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
                             <Button x:Name="AddRole" Margin="0 10 0 50" Background="LimeGreen" BorderBrush="LimeGreen" MinHeight="30" MinWidth="250" Click="AddRole_Click"  >
@@ -452,8 +465,11 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <DataGrid x:Name="TypesDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="True" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
-
+                        <DataGrid x:Name="TypesDataGrid" Grid.ColumnSpan="4" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" CanUserAddRows="False" MaxHeight="490" VerticalAlignment="Top" Style="{StaticResource MyDataGrid}"  SelectionChanged="DataGrid_SelectionChanged" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="TypesDataGridId" Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn x:Name="TypesDataGridType" Header="Type" Binding="{Binding Path=Type}"/>
+                            </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel  HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
                             <Button x:Name="AddType" Margin="0 10 0 50" Background="LimeGreen" BorderBrush="LimeGreen" MinHeight="30" MinWidth="250" Click="AddType_Click"  >

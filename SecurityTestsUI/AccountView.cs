@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Resources;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -151,6 +152,7 @@ namespace SecurityTestsUI
             DataAccess db = new DataAccess();
             try
             {
+                CheckEmail();
                 db.UpdateUser(_currentUser.Id, UserName.Text, Password.Text, Role.SelectedIndex + 1, Name.Text, Email.Text, DateTime.Parse(Birthday.Text));
                 ErrorMessage.Text = resourseManager.GetString("UpdateAccountSuccess", _currentCulture);
                 ErrorMessage.Foreground = Brushes.LimeGreen;
@@ -162,10 +164,19 @@ namespace SecurityTestsUI
                 ErrorMessage.Text = ex.Message; 
                 if (ex.Message.StartsWith("Истекло"))
                 {
-                    Console.WriteLine(resourseManager.GetString("LongTime", _currentCulture));
+                    ErrorMessage.Text = resourseManager.GetString("LongTime", _currentCulture);
                 }
                 ErrorSeparator.Visibility = Visibility.Visible;
                 ErrorMessage.Visibility = Visibility.Visible;
+            }
+        }
+        private void CheckEmail()
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(Email.Text);
+            if (!match.Success)
+            {
+                throw new Exception("incorrect email");
             }
         }
 

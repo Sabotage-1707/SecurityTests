@@ -138,6 +138,9 @@
   <data name="AllQuestoinsLabel" xml:space="preserve">
     <value>All Questions:</value>
   </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
   <data name="AnswerDeletedSuccess" xml:space="preserve">
     <value>Answer was successfuly deleted</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="BackButton" xml:space="preserve">
     <value>Back to Login</value>
+  </data>
+  <data name="Birthday" xml:space="preserve">
+    <value>Birthday</value>
   </data>
   <data name="CorrectAnswersLabel" xml:space="preserve">
     <value>Correct Answers:</value>
@@ -162,14 +168,23 @@
   <data name="DatePicker" xml:space="preserve">
     <value>Enter Date Birthday</value>
   </data>
+  <data name="DateTimeOfLastTryByFireSafety" xml:space="preserve">
+    <value>DateTimeOfLastTryByFireSafety</value>
+  </data>
   <data name="DateTimeOfLastTryByFireSafetyLabel" xml:space="preserve">
     <value>Last Try By Fire Safety:</value>
+  </data>
+  <data name="DateTimeOfLastTryByIndustrialSafety" xml:space="preserve">
+    <value>DateTimeOfLastTryByIndustrialSafety</value>
   </data>
   <data name="DateTimeOfLastTryByIndustrialSafetyLabel" xml:space="preserve">
     <value>Last Try By Industrial Safety:</value>
   </data>
   <data name="DeleteButton" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>EmailAddress</value>
   </data>
   <data name="EmployeesReport" xml:space="preserve">
     <value>Show Employee report</value>
@@ -204,6 +219,9 @@
   <data name="Help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
   <data name="IncorrectData" xml:space="preserve">
     <value>The Fields aren't filled in correctly</value>
   </data>
@@ -234,6 +252,9 @@
   <data name="ManagersReport" xml:space="preserve">
     <value>Show Manager report</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="NextButtonText" xml:space="preserve">
     <value>NEXT</value>
   </data>
@@ -246,11 +267,17 @@
   <data name="PasswordBoxText" xml:space="preserve">
     <value>********</value>
   </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
   <data name="QuestionAddSuccess" xml:space="preserve">
     <value>New question was seccessfuly added.</value>
   </data>
   <data name="QuestionDeletedSuccess" xml:space="preserve">
     <value>Question was successfuly deleted</value>
+  </data>
+  <data name="QuestionId" xml:space="preserve">
+    <value>QuestionId</value>
   </data>
   <data name="QuestionsTab" xml:space="preserve">
     <value>Questions</value>
@@ -290,6 +317,12 @@
   </data>
   <data name="RoleDeletedSuccess" xml:space="preserve">
     <value>Role was successfuly deleted</value>
+  </data>
+  <data name="RoleId" xml:space="preserve">
+    <value>RoleId</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>RoleName</value>
   </data>
   <data name="RoleNameAreNotFilled" xml:space="preserve">
     <value>Role name are not filled</value>
@@ -336,6 +369,9 @@
   <data name="ThirdAnswerTextBox" xml:space="preserve">
     <value>Enter Third Answer</value>
   </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
   <data name="TypeAddSuccess" xml:space="preserve">
     <value>Type was successfuly added</value>
   </data>
@@ -344,6 +380,9 @@
   </data>
   <data name="TypeDeletedSuccess" xml:space="preserve">
     <value>Type was successfuly deleted</value>
+  </data>
+  <data name="TypeOfQuestionId" xml:space="preserve">
+    <value>TypeOfQuestionId</value>
   </data>
   <data name="TypesOfQuestion" xml:space="preserve">
     <value>Choose Type Of Question</value>
@@ -387,6 +426,12 @@
   <data name="UserHaventPassedYet" xml:space="preserve">
     <value>Haven't passed yet</value>
   </data>
+  <data name="UserName" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="UserPassword" xml:space="preserve">
+    <value>UserPassword</value>
+  </data>
   <data name="UsersTab" xml:space="preserve">
     <value>Users</value>
   </data>
@@ -402,8 +447,14 @@
   <data name="VereficationStatusByFireSafety" xml:space="preserve">
     <value>Verefication Status By Fire Safety:</value>
   </data>
+  <data name="VereficationStatusByFireSafetyAdmin" xml:space="preserve">
+    <value>VereficationStatusByFireSafety</value>
+  </data>
   <data name="VereficationStatusByIndustrialSafety" xml:space="preserve">
     <value>Verefication Status By Industrial Safety:</value>
+  </data>
+  <data name="VereficationStatusByIndustrialSafetyAdmin" xml:space="preserve">
+    <value>VereficationStatusByIndustrialSafety</value>
   </data>
   <data name="WorkersReport" xml:space="preserve">
     <value>Show Workers report</value>

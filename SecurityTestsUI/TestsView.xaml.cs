@@ -363,7 +363,7 @@ namespace SecurityTestsUI
                         break;
 
                     case 2:
-
+                        db.UserTryIndustrialSafetyTest(_currentUser);
                         if (percent < 85)
                         {
                             VereficationStatusByIndustrialSafetyResultsArea.Text = resourseManager.GetString("NonVereficated", _currentCulture); ;

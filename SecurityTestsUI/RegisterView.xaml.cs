@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Resources;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -84,6 +85,8 @@ namespace SecurityTestsUI
 
             try
             {
+                CheckEmail();
+
                 db.CreateUser(UserName.Text, Password.Text, Role.SelectedIndex + 1, Name.Text, Email.Text, DateTime.Parse(Birthday.Text));
 
                 ResetFields();
@@ -93,7 +96,7 @@ namespace SecurityTestsUI
                 ShowSuccessMessage();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
                 HideSuccessMessage();
@@ -104,8 +107,19 @@ namespace SecurityTestsUI
 
         }
 
+        private void CheckEmail()
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(Email.Text);
+            if (!match.Success)
+            {
+                throw new Exception("incorrect email");
+            }
+        }
+
         private void ShowError(Exception ex)
         {
+
             if (ex.Message.StartsWith("Истекло"))
             {
                 ErrorMessage.Text = resourseManager.GetString("LongTime", _currentCulture);
@@ -113,7 +127,10 @@ namespace SecurityTestsUI
             else
             {
                 ErrorMessage.Text = resourseManager.GetString("RegisterViewErrorMessage", _currentCulture);
-
+            }
+            if (ex.Message == "incorrect email")
+            {
+                ErrorMessage.Text = "incorrect email";
             }
             ErrorMessage.Visibility = Visibility.Visible;
         }

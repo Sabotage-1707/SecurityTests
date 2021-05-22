@@ -124,6 +124,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Answer.
+        /// </summary>
+        internal static string Answer {
+            get {
+                return ResourceManager.GetString("Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Answer was successfuly deleted.
         /// </summary>
         internal static string AnswerDeletedSuccess {
@@ -147,6 +156,15 @@ namespace SecurityTestsUI.Languages {
         internal static string BackButton {
             get {
                 return ResourceManager.GetString("BackButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Birthday.
+        /// </summary>
+        internal static string Birthday {
+            get {
+                return ResourceManager.GetString("Birthday", resourceCulture);
             }
         }
         
@@ -196,11 +214,29 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на DateTimeOfLastTryByFireSafety.
+        /// </summary>
+        internal static string DateTimeOfLastTryByFireSafety {
+            get {
+                return ResourceManager.GetString("DateTimeOfLastTryByFireSafety", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Last Try By Fire Safety:.
         /// </summary>
         internal static string DateTimeOfLastTryByFireSafetyLabel {
             get {
                 return ResourceManager.GetString("DateTimeOfLastTryByFireSafetyLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на DateTimeOfLastTryByIndustrialSafety.
+        /// </summary>
+        internal static string DateTimeOfLastTryByIndustrialSafety {
+            get {
+                return ResourceManager.GetString("DateTimeOfLastTryByIndustrialSafety", resourceCulture);
             }
         }
         
@@ -219,6 +255,15 @@ namespace SecurityTestsUI.Languages {
         internal static string DeleteButton {
             get {
                 return ResourceManager.GetString("DeleteButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на EmailAddress.
+        /// </summary>
+        internal static string EmailAddress {
+            get {
+                return ResourceManager.GetString("EmailAddress", resourceCulture);
             }
         }
         
@@ -322,6 +367,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Id.
+        /// </summary>
+        internal static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на The Fields aren&apos;t filled in correctly.
         /// </summary>
         internal static string IncorrectData {
@@ -412,6 +466,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на NEXT.
         /// </summary>
         internal static string NextButtonText {
@@ -448,6 +511,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Question.
+        /// </summary>
+        internal static string Question {
+            get {
+                return ResourceManager.GetString("Question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на New question was seccessfuly added..
         /// </summary>
         internal static string QuestionAddSuccess {
@@ -462,6 +534,15 @@ namespace SecurityTestsUI.Languages {
         internal static string QuestionDeletedSuccess {
             get {
                 return ResourceManager.GetString("QuestionDeletedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на QuestionId.
+        /// </summary>
+        internal static string QuestionId {
+            get {
+                return ResourceManager.GetString("QuestionId", resourceCulture);
             }
         }
         
@@ -579,6 +660,24 @@ namespace SecurityTestsUI.Languages {
         internal static string RoleDeletedSuccess {
             get {
                 return ResourceManager.GetString("RoleDeletedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на RoleId.
+        /// </summary>
+        internal static string RoleId {
+            get {
+                return ResourceManager.GetString("RoleId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на RoleName.
+        /// </summary>
+        internal static string RoleName {
+            get {
+                return ResourceManager.GetString("RoleName", resourceCulture);
             }
         }
         
@@ -718,6 +817,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Type.
+        /// </summary>
+        internal static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Type was successfuly added.
         /// </summary>
         internal static string TypeAddSuccess {
@@ -741,6 +849,15 @@ namespace SecurityTestsUI.Languages {
         internal static string TypeDeletedSuccess {
             get {
                 return ResourceManager.GetString("TypeDeletedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на TypeOfQuestionId.
+        /// </summary>
+        internal static string TypeOfQuestionId {
+            get {
+                return ResourceManager.GetString("TypeOfQuestionId", resourceCulture);
             }
         }
         
@@ -871,6 +988,24 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на UserName.
+        /// </summary>
+        internal static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на UserPassword.
+        /// </summary>
+        internal static string UserPassword {
+            get {
+                return ResourceManager.GetString("UserPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Users.
         /// </summary>
         internal static string UsersTab {
@@ -916,11 +1051,29 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на VereficationStatusByFireSafety.
+        /// </summary>
+        internal static string VereficationStatusByFireSafetyAdmin {
+            get {
+                return ResourceManager.GetString("VereficationStatusByFireSafetyAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Verefication Status By Industrial Safety:.
         /// </summary>
         internal static string VereficationStatusByIndustrialSafety {
             get {
                 return ResourceManager.GetString("VereficationStatusByIndustrialSafety", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на VereficationStatusByIndustrialSafety.
+        /// </summary>
+        internal static string VereficationStatusByIndustrialSafetyAdmin {
+            get {
+                return ResourceManager.GetString("VereficationStatusByIndustrialSafetyAdmin", resourceCulture);
             }
         }
         

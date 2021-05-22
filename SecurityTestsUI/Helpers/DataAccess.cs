@@ -203,7 +203,7 @@ namespace SecurityTestsUI
                 db.Execute(sqlQuery);
             }
         }
-        public void UpdateUser(int userId, string userName, string userPassword, int roleId, string name, string emailAddress, DateTime birthday, bool VereficationStatusByFireSafety, bool VereficationStatusByIndustrialSafety, int counterOfUsedTries, DateTime DateTimeOfLastTryByFireSafety, DateTime DateTimeOfLastTryByIndustrialSafety)
+        public void UpdateUser(int userId, string userName, string userPassword, int roleId, string name, string emailAddress, DateTime birthday, int counterOfUsedTries, DateTime DateTimeOfLastTryByFireSafety, DateTime DateTimeOfLastTryByIndustrialSafety)
         {
             if (userName == "" || userPassword == "" || roleId == 0 || name == "" || emailAddress == "" || birthday == null)
             {
@@ -234,14 +234,12 @@ namespace SecurityTestsUI
             {
                 date2 = $"'{DateTimeOfLastTryByIndustrialSafety.ToString(formatDateTime)}'";
             }
-            var st1 = VereficationStatusByFireSafety == true ? 1 : 0;
-
-            var st2 = VereficationStatusByIndustrialSafety == true ? 1 : 0;
+            
 
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                  sqlQuery = $"Update Users Set UserName = N'{userName}',UserPassword = N'{userPassword}', RoleId = {roleId}, Name = N'{name}', EmailAddress = N'{emailAddress}', Birthday = '{birthday.ToString(formatDateTime)}'," +
-                    $"VereficationStatusByFireSafety = {st1},VereficationStatusByIndustrialSafety = {st2}, CounterOfUsedTries = {counterOfUsedTries}, DateTimeOfLastTryByFireSafety ={date1}, DateTimeOfLastTryByIndustrialSafety ={date2} where Id = {userId}";
+                    $" CounterOfUsedTries = {counterOfUsedTries}, DateTimeOfLastTryByFireSafety ={date1}, DateTimeOfLastTryByIndustrialSafety ={date2} where Id = {userId}";
                 db.Execute(sqlQuery);
             }
         }
@@ -277,6 +275,7 @@ namespace SecurityTestsUI
                 return output;
             }
         }
+       
         public List<Role> LoadRoles()
         {
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))

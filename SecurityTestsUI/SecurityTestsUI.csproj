@@ -195,17 +195,35 @@
     <Compile Include="ReportsView.xaml.cs">
       <DependentUpon>ReportsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportByEmployeesRu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportByEmployeesRu.Designer.cs">
+      <DependentUpon>ReportByEmployeesRu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ReportByManagers.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\ReportByManagers.Designer.cs">
       <DependentUpon>ReportByManagers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportByManagersRu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportByManagersRu.Designer.cs">
+      <DependentUpon>ReportByManagersRu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ReportByWorkers.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\ReportByWorkers.Designer.cs">
       <DependentUpon>ReportByWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportByWorkersRu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportByWorkersRu.Designer.cs">
+      <DependentUpon>ReportByWorkersRu.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TestsView.xaml.cs">
@@ -252,11 +270,20 @@
     <EmbeddedResource Include="Reports\ReportByEmployees.resx">
       <DependentUpon>ReportByEmployees.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportByEmployeesRu.resx">
+      <DependentUpon>ReportByEmployeesRu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportByManagers.resx">
       <DependentUpon>ReportByManagers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportByManagersRu.resx">
+      <DependentUpon>ReportByManagersRu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportByWorkers.resx">
       <DependentUpon>ReportByWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportByWorkersRu.resx">
+      <DependentUpon>ReportByWorkersRu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

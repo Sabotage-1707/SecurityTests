@@ -87,6 +87,10 @@ namespace SecurityTestsUI
             {
                 CheckEmail();
 
+                CheckExistingUser(db);
+
+                Check18YearsOld();
+
                 db.CreateUser(UserName.Text, Password.Text, Role.SelectedIndex + 1, Name.Text, Email.Text, DateTime.Parse(Birthday.Text));
 
                 ResetFields();
@@ -106,7 +110,17 @@ namespace SecurityTestsUI
             }
 
         }
-
+        private void CheckExistingUser(DataAccess db)
+        {
+            var users = db.GetUsers();
+            foreach(var item in users)
+            {
+                if(UserName.Text.Equals(item.UserName))
+                {
+                    throw new Exception("Username is already taken");
+                }
+            }
+        }
         private void CheckEmail()
         {
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -114,6 +128,14 @@ namespace SecurityTestsUI
             if (!match.Success)
             {
                 throw new Exception("incorrect email");
+            }
+        }
+
+        private void Check18YearsOld()
+        {
+            if(!(DateTime.Parse(Birthday.Text) < DateTime.UtcNow.AddYears(-18)))
+            {
+                throw new Exception("18 years");
             }
         }
 
@@ -130,7 +152,15 @@ namespace SecurityTestsUI
             }
             if (ex.Message == "incorrect email")
             {
-                ErrorMessage.Text = "incorrect email";
+                ErrorMessage.Text = resourseManager.GetString("IncorrectEmail", _currentCulture);
+            }
+            if (ex.Message == "Username is already taken")
+            {
+                ErrorMessage.Text = resourseManager.GetString("UsernameTaken", _currentCulture);
+            }
+            if(ex.Message == "18 years")
+            {
+                ErrorMessage.Text = resourseManager.GetString("User18YearsOld", _currentCulture);
             }
             ErrorMessage.Visibility = Visibility.Visible;
         }

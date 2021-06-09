@@ -225,6 +225,9 @@
   <data name="IncorrectData" xml:space="preserve">
     <value>Поля заполнены не корректно</value>
   </data>
+  <data name="IncorrectEmail" xml:space="preserve">
+    <value>Некорретный почтовый адрес</value>
+  </data>
   <data name="IndustrialSafetyTestButton" xml:space="preserve">
     <value>Пройти тест по промышленной безопастности</value>
   </data>
@@ -259,7 +262,7 @@
     <value>СЛЕДУЮЩИЙ</value>
   </data>
   <data name="NonVereficated" xml:space="preserve">
-    <value>Не верефицирован</value>
+    <value>Не верифицирован</value>
   </data>
   <data name="OutOf" xml:space="preserve">
     <value>из</value>
@@ -417,6 +420,9 @@
   <data name="UpdateWindow" xml:space="preserve">
     <value>Обновить</value>
   </data>
+  <data name="User18YearsOld" xml:space="preserve">
+    <value>Пользователь не может быть младше 18 лет</value>
+  </data>
   <data name="UserAddSuccess" xml:space="preserve">
     <value>Пользователь успешно добавлен</value>
   </data>
@@ -429,6 +435,9 @@
   <data name="UserName" xml:space="preserve">
     <value>Никнейм Пользователя</value>
   </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>Данное имя пользователя уже занято</value>
+  </data>
   <data name="UserPassword" xml:space="preserve">
     <value>Пароль</value>
   </data>
@@ -436,25 +445,25 @@
     <value>Пользователи</value>
   </data>
   <data name="Vereficated" xml:space="preserve">
-    <value>Верефицирован</value>
+    <value>Верифицирован</value>
   </data>
   <data name="VereficatedByFireSafety" xml:space="preserve">
-    <value>Верефицирован по пож.без.</value>
+    <value>Верифицирован по пож.без.</value>
   </data>
   <data name="VereficatedByIndustrialSafety" xml:space="preserve">
-    <value>Верефицирован по пром.без.</value>
+    <value>Верифицирован по пром.без.</value>
   </data>
   <data name="VereficationStatusByFireSafety" xml:space="preserve">
     <value>Пожарная безопасность:</value>
   </data>
   <data name="VereficationStatusByFireSafetyAdmin" xml:space="preserve">
-    <value>Статус верифицирования по пожарной бзопасности</value>
+    <value>Статус верифицирования по пожарной безопасности</value>
   </data>
   <data name="VereficationStatusByIndustrialSafety" xml:space="preserve">
     <value>Промышленная безопасность:</value>
   </data>
   <data name="VereficationStatusByIndustrialSafetyAdmin" xml:space="preserve">
-    <value>Статус верифицирования по промышленной бзопасности</value>
+    <value>Статус верифицирования по промышленной безопасности</value>
   </data>
   <data name="WorkersReport" xml:space="preserve">
     <value>Показать отчет по рабочим</value>

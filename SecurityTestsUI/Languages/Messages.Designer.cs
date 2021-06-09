@@ -385,6 +385,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на incorrect email.
+        /// </summary>
+        internal static string IncorrectEmail {
+            get {
+                return ResourceManager.GetString("IncorrectEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Pass the industrial safety test.
         /// </summary>
         internal static string IndustrialSafetyTestButton {
@@ -961,6 +970,15 @@ namespace SecurityTestsUI.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The user cannot be under the age of 18.
+        /// </summary>
+        internal static string User18YearsOld {
+            get {
+                return ResourceManager.GetString("User18YearsOld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на User was successfuly added.
         /// </summary>
         internal static string UserAddSuccess {
@@ -993,6 +1011,15 @@ namespace SecurityTestsUI.Languages {
         internal static string UserName {
             get {
                 return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The username is already taken.
+        /// </summary>
+        internal static string UsernameTaken {
+            get {
+                return ResourceManager.GetString("UsernameTaken", resourceCulture);
             }
         }
         

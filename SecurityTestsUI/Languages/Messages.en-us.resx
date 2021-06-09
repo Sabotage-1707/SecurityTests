@@ -225,6 +225,9 @@
   <data name="IncorrectData" xml:space="preserve">
     <value>The Fields aren't filled in correctly</value>
   </data>
+  <data name="IncorrectEmail" xml:space="preserve">
+    <value>incorrect email</value>
+  </data>
   <data name="IndustrialSafetyTestButton" xml:space="preserve">
     <value>Pass the industrial safety test</value>
   </data>
@@ -417,6 +420,9 @@
   <data name="UpdateWindow" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="User18YearsOld" xml:space="preserve">
+    <value>The user cannot be under the age of 18</value>
+  </data>
   <data name="UserAddSuccess" xml:space="preserve">
     <value>User was successfuly added</value>
   </data>
@@ -428,6 +434,9 @@
   </data>
   <data name="UserName" xml:space="preserve">
     <value>UserName</value>
+  </data>
+  <data name="UsernameTaken" xml:space="preserve">
+    <value>The username is already taken</value>
   </data>
   <data name="UserPassword" xml:space="preserve">
     <value>UserPassword</value>

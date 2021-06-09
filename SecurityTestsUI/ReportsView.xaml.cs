@@ -43,5 +43,24 @@ namespace SecurityTestsUI
             reportViewer.DocumentSource = report;
             report.CreateDocument();
         }
+        public ReportsView(ReportByEmployeesRu report)
+        {
+            InitializeComponent();
+            reportViewer.DocumentSource = report;
+            report.CreateDocument();
+        }
+        public ReportsView(ReportByManagersRu report)
+        {
+            InitializeComponent();
+            reportViewer.DocumentSource = report;
+            report.CreateDocument();
+        }
+
+        public ReportsView(ReportByWorkersRu report)
+        {
+            InitializeComponent();
+            reportViewer.DocumentSource = report;
+            report.CreateDocument();
+        }
     }
 }

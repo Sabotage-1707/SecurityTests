@@ -93,51 +93,39 @@ namespace SecurityTestsUI
             // 
             // pageInfo1
             // 
-            this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.pageInfo1.Name = "pageInfo1";
             this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.pageInfo1.SizeF = new System.Drawing.SizeF(1069.5F, 23F);
             this.pageInfo1.StyleName = "PageInfo";
             // 
             // pageInfo2
             // 
-            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(1069F, 0F);
             this.pageInfo2.Name = "pageInfo2";
-            this.pageInfo2.SizeF = new System.Drawing.SizeF(1069.5F, 23F);
             this.pageInfo2.StyleName = "PageInfo";
             this.pageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.pageInfo2.TextFormatString = "Страница {0} из {1}";
             // 
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.label1});
-            this.ReportHeader.HeightF = 60F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // label1
             // 
-            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.label1.Name = "label1";
-            this.label1.SizeF = new System.Drawing.SizeF(2139F, 24.19433F);
             this.label1.StyleName = "Title";
-            this.label1.Text = "Report By Employees";
             // 
             // GroupHeader1
             // 
             this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.table1});
             this.GroupHeader1.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-            this.GroupHeader1.HeightF = 28F;
             this.GroupHeader1.Name = "GroupHeader1";
             // 
             // table1
             // 
-            this.table1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.table1.Name = "table1";
             this.table1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.tableRow1});
-            this.table1.SizeF = new System.Drawing.SizeF(2139F, 28F);
             // 
             // tableRow1
             // 
@@ -153,7 +141,6 @@ namespace SecurityTestsUI
             this.tableCell9,
             this.tableCell10});
             this.tableRow1.Name = "tableRow1";
-            this.tableRow1.Weight = 1D;
             // 
             // tableCell1
             // 
@@ -162,94 +149,73 @@ namespace SecurityTestsUI
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorders = false;
             this.tableCell1.StylePriority.UseTextAlignment = false;
-            this.tableCell1.Text = "Id";
             this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell1.Weight = 0.018761877815207346D;
             // 
             // tableCell2
             // 
             this.tableCell2.Name = "tableCell2";
             this.tableCell2.StyleName = "DetailCaption1";
-            this.tableCell2.Text = "User Name";
-            this.tableCell2.Weight = 0.057179529904316052D;
             // 
             // tableCell3
             // 
             this.tableCell3.Name = "tableCell3";
             this.tableCell3.StyleName = "DetailCaption1";
-            this.tableCell3.Text = "Role Name";
-            this.tableCell3.Weight = 0.056677730465782422D;
             // 
             // tableCell4
             // 
             this.tableCell4.Name = "tableCell4";
             this.tableCell4.StyleName = "DetailCaption1";
-            this.tableCell4.Text = "Name";
-            this.tableCell4.Weight = 0.035018321675304609D;
             // 
             // tableCell5
             // 
             this.tableCell5.Name = "tableCell5";
             this.tableCell5.StyleName = "DetailCaption1";
-            this.tableCell5.Text = "Birthday";
-            this.tableCell5.Weight = 0.046823495345006426D;
             // 
             // tableCell6
             // 
             this.tableCell6.Name = "tableCell6";
             this.tableCell6.StyleName = "DetailCaption1";
             this.tableCell6.StylePriority.UseTextAlignment = false;
-            this.tableCell6.Text = "Counter Of Used Tries";
             this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell6.Weight = 0.10491067352223586D;
             // 
             // tableCell7
             // 
             this.tableCell7.Name = "tableCell7";
             this.tableCell7.StyleName = "DetailCaption1";
             this.tableCell7.StylePriority.UseTextAlignment = false;
-            this.tableCell7.Text = "Verefication Status By Fire Safety";
             this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell7.Weight = 0.15268507891026764D;
             // 
             // tableCell8
             // 
             this.tableCell8.Name = "tableCell8";
             this.tableCell8.StyleName = "DetailCaption1";
             this.tableCell8.StylePriority.UseTextAlignment = false;
-            this.tableCell8.Text = "Verefication Status By Industrial Safety";
             this.tableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell8.Weight = 0.17630840941755055D;
             // 
             // tableCell9
             // 
             this.tableCell9.Name = "tableCell9";
             this.tableCell9.StyleName = "DetailCaption1";
-            this.tableCell9.Text = "Date Time Of Last Try By Fire Safety";
-            this.tableCell9.Weight = 0.16400575927620237D;
             // 
             // tableCell10
             // 
             this.tableCell10.Name = "tableCell10";
             this.tableCell10.StyleName = "DetailCaption1";
-            this.tableCell10.Text = "Date Time Of Last Try By Industrial Safety";
-            this.tableCell10.Weight = 0.18762908978348528D;
             // 
             // Detail
             // 
+            this.Detail.BackColor = System.Drawing.Color.Aquamarine;
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.table2});
-            this.Detail.HeightF = 25F;
             this.Detail.Name = "Detail";
+            this.Detail.StylePriority.UseBackColor = false;
             // 
             // table2
             // 
-            this.table2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.table2.Name = "table2";
             this.table2.OddStyleName = "DetailData3_Odd";
             this.table2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.tableRow2});
-            this.table2.SizeF = new System.Drawing.SizeF(2139F, 25F);
             // 
             // tableRow2
             // 
@@ -265,7 +231,6 @@ namespace SecurityTestsUI
             this.tableCell19,
             this.tableCell20});
             this.tableRow2.Name = "tableRow2";
-            this.tableRow2.Weight = 11.5D;
             // 
             // tableCell11
             // 
@@ -277,7 +242,6 @@ namespace SecurityTestsUI
             this.tableCell11.StylePriority.UseBorders = false;
             this.tableCell11.StylePriority.UseTextAlignment = false;
             this.tableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell11.Weight = 0.018761877815207346D;
             // 
             // tableCell12
             // 
@@ -285,7 +249,6 @@ namespace SecurityTestsUI
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[UserName]")});
             this.tableCell12.Name = "tableCell12";
             this.tableCell12.StyleName = "DetailData1";
-            this.tableCell12.Weight = 0.057179533471120411D;
             // 
             // tableCell13
             // 
@@ -293,7 +256,6 @@ namespace SecurityTestsUI
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RoleName]")});
             this.tableCell13.Name = "tableCell13";
             this.tableCell13.StyleName = "DetailData1";
-            this.tableCell13.Weight = 0.056677734032586781D;
             // 
             // tableCell14
             // 
@@ -301,15 +263,14 @@ namespace SecurityTestsUI
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Name]")});
             this.tableCell14.Name = "tableCell14";
             this.tableCell14.StyleName = "DetailData1";
-            this.tableCell14.Weight = 0.035018321675304609D;
             // 
             // tableCell15
             // 
             this.tableCell15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Birthday]")});
+            this.tableCell15.Multiline = true;
             this.tableCell15.Name = "tableCell15";
             this.tableCell15.StyleName = "DetailData1";
-            this.tableCell15.Weight = 0.046823495345006426D;
             // 
             // tableCell16
             // 
@@ -319,7 +280,6 @@ namespace SecurityTestsUI
             this.tableCell16.StyleName = "DetailData1";
             this.tableCell16.StylePriority.UseTextAlignment = false;
             this.tableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.tableCell16.Weight = 0.10491067352223586D;
             // 
             // tableCell17
             // 
@@ -329,7 +289,6 @@ namespace SecurityTestsUI
             this.tableCell17.StyleName = "DetailData1";
             this.tableCell17.StylePriority.UseTextAlignment = false;
             this.tableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell17.Weight = 0.15268507891026764D;
             // 
             // checkBox1
             // 
@@ -338,9 +297,7 @@ namespace SecurityTestsUI
             this.checkBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "CheckBoxState", "[VereficationStatusByFireSafety]")});
             this.checkBox1.GlyphOptions.Alignment = DevExpress.Utils.HorzAlignment.Center;
-            this.checkBox1.LocationFloat = new DevExpress.Utils.PointFloat(2.083333F, 0F);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.SizeF = new System.Drawing.SizeF(324.51F, 25F);
             // 
             // tableCell18
             // 
@@ -350,7 +307,6 @@ namespace SecurityTestsUI
             this.tableCell18.StyleName = "DetailData1";
             this.tableCell18.StylePriority.UseTextAlignment = false;
             this.tableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell18.Weight = 0.17630840941755055D;
             // 
             // checkBox2
             // 
@@ -359,9 +315,7 @@ namespace SecurityTestsUI
             this.checkBox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "CheckBoxState", "[VereficationStatusByIndustrialSafety]")});
             this.checkBox2.GlyphOptions.Alignment = DevExpress.Utils.HorzAlignment.Center;
-            this.checkBox2.LocationFloat = new DevExpress.Utils.PointFloat(2.083333F, 0F);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.SizeF = new System.Drawing.SizeF(375.0403F, 25F);
             // 
             // tableCell19
             // 
@@ -369,7 +323,6 @@ namespace SecurityTestsUI
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DateTimeOfLastTryByFireSafety]")});
             this.tableCell19.Name = "tableCell19";
             this.tableCell19.StyleName = "DetailData1";
-            this.tableCell19.Weight = 0.16400575927620237D;
             // 
             // tableCell20
             // 
@@ -377,7 +330,6 @@ namespace SecurityTestsUI
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DateTimeOfLastTryByIndustrialSafety]")});
             this.tableCell20.Name = "tableCell20";
             this.tableCell20.StyleName = "DetailData1";
-            this.tableCell20.Weight = 0.18762908978348528D;
             // 
             // sqlDataSource1
             // 
@@ -474,11 +426,78 @@ namespace SecurityTestsUI
             this.sqlDataSource1});
             this.DataMember = "GetAllEmployees";
             this.DataSource = this.sqlDataSource1;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Landscape = true;
+            this.LocalizationItems.AddRange(new DevExpress.XtraReports.Localization.LocalizationItem[] {
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.checkBox1, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(2.083333F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.checkBox1, "Default", "SizeF", new System.Drawing.SizeF(324.51F, 25F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.checkBox2, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(2.083333F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.checkBox2, "Default", "SizeF", new System.Drawing.SizeF(375.0403F, 25F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.Detail, "Default", "HeightF", 25F),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.GroupHeader1, "Default", "HeightF", 28F),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.label1, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(0F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.label1, "Default", "SizeF", new System.Drawing.SizeF(2139F, 24.19433F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.label1, "Default", "Text", "Report By Employees"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.label1, "ru-RU", "Text", "Отчет по сотрудникам"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo1, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(0F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo1, "Default", "SizeF", new System.Drawing.SizeF(1069.5F, 23F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo1, "Default", "TextFormatString", "{0:dd.MM.yyyy HH:mm}"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo2, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(1069F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo2, "Default", "SizeF", new System.Drawing.SizeF(1069.5F, 23F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.pageInfo2, "Default", "TextFormatString", "page {0} from {1}"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this, "Default", "Font", new System.Drawing.Font("Arial", 9.75F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this, "Default", "PaperKind", System.Drawing.Printing.PaperKind.A2),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.ReportHeader, "Default", "HeightF", 60F),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.table1, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(0F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.table1, "Default", "SizeF", new System.Drawing.SizeF(2139F, 28F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.table2, "Default", "LocationFloat", new DevExpress.Utils.PointFloat(0F, 0F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.table2, "Default", "SizeF", new System.Drawing.SizeF(2139F, 25F)),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell1, "Default", "Text", "Id"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell1, "ru-RU", "Text", "Ид"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell1, "Default", "Weight", 0.018761877815207346D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell10, "Default", "Text", "Date Time Of Last Try By Industrial Safety"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell10, "ru-RU", "Text", "Дата последней попытки верифицирования по промышленной безопасности"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell10, "Default", "Weight", 0.18762908978348528D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell11, "Default", "Weight", 0.018761877815207346D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell12, "Default", "Weight", 0.057179533471120411D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell13, "Default", "Weight", 0.056677734032586781D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell14, "Default", "Weight", 0.035018321675304609D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell15, "Default", "TextFormatString", "{0:dd.MM.yyyy}"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell15, "Default", "Weight", 0.046823495345006426D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell16, "Default", "Weight", 0.10491067352223586D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell17, "Default", "Weight", 0.15268507891026764D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell18, "Default", "Weight", 0.17630840941755055D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell19, "Default", "TextFormatString", "{0:dd.MM.yyyy HH:mm}"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell19, "Default", "Weight", 0.16400575927620237D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell2, "Default", "Text", "User Name"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell2, "ru-RU", "Text", "Никнейм"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell2, "Default", "Weight", 0.057179529904316052D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell20, "Default", "TextFormatString", "{0:dd-MM-yyyy HH:mm}"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell20, "Default", "Weight", 0.18762908978348528D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell3, "Default", "Text", "Role Name"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell3, "ru-RU", "Text", "Роль"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell3, "Default", "Weight", 0.056677730465782422D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell4, "Default", "Text", "Name"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell4, "ru-RU", "Text", "Имя"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell4, "Default", "Weight", 0.035018321675304609D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell5, "Default", "Text", "Birthday"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell5, "ru-RU", "Text", "Дата Рождения"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell5, "Default", "Weight", 0.046823495345006426D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell6, "Default", "Text", "Counter Of Used Tries"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell6, "ru-RU", "Text", "Количетсво использованных попыток"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell6, "Default", "Weight", 0.10491067352223586D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell7, "Default", "Text", "Verefication Status By Fire Safety"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell7, "ru-RU", "Text", "Статус верификации по пожарной безопасности"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell7, "Default", "Weight", 0.15268507891026764D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell8, "Default", "Text", "Verefication Status By Industrial Safety"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell8, "ru-RU", "Text", "Статус верификации по промышленной безопасности"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell8, "Default", "Weight", 0.17630840941755055D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell9, "Default", "Text", "Date Time Of Last Try By Fire Safety"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell9, "ru-RU", "Text", "Дата последней попытки верифицирования по пожарной безопасности"),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableCell9, "Default", "Weight", 0.16400575927620237D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableRow1, "Default", "Weight", 1D),
+            new DevExpress.XtraReports.Localization.LocalizationItem(this.tableRow2, "Default", "Weight", 11.5D)});
             this.PageHeight = 1654;
             this.PageWidth = 2339;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A2;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.fromDate,
             this.toDate});

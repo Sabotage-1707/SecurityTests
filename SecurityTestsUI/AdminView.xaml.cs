@@ -292,22 +292,49 @@ namespace SecurityTestsUI
 
         private void ReportByEmployees_Click(object sender, RoutedEventArgs e)
         {
-            ReportByEmployees report = new ReportByEmployees();
-            ReportsView reportView = new ReportsView(report);
+            ReportsView reportView;
+            if (_currentCulture.Name.EndsWith("RU"))
+            {
+                var report = new ReportByEmployeesRu();
+                reportView = new ReportsView(report);
+            }
+            else
+            {
+               var report = new ReportByEmployees();
+               reportView = new ReportsView(report);
+            } 
             reportView.Show();
         }
         
         private void ReportByManagers_Click(object sender, RoutedEventArgs e)
         {
-            ReportByManagers report = new ReportByManagers();            
-            ReportsView reportView = new ReportsView(report);
+            ReportsView reportView;
+            if (_currentCulture.Name.EndsWith("RU"))
+            {
+                var report = new ReportByManagersRu();
+                reportView = new ReportsView(report);
+            }
+            else
+            {
+                var report = new ReportByManagers();
+                reportView = new ReportsView(report);
+            }
             reportView.Show();
         }
 
         private  void ReportByWorkers_Click(object sender, RoutedEventArgs e)
         {
-            ReportByWorkers report = new ReportByWorkers();
-            ReportsView reportView = new ReportsView(report);
+            ReportsView reportView;
+            if (_currentCulture.Name.EndsWith("RU"))
+            {
+                var report = new ReportByWorkersRu();
+                reportView = new ReportsView(report);
+            }
+            else
+            {
+                var report = new ReportByWorkers();
+                reportView = new ReportsView(report);
+            }
             reportView.Show();
         }
 

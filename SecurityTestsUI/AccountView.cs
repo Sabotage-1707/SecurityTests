@@ -153,6 +153,8 @@ namespace SecurityTestsUI
             try
             {
                 CheckEmail();
+                CheckExistingUser(db);
+                Check18YearsOld();
                 db.UpdateUser(_currentUser.Id, UserName.Text, Password.Text, Role.SelectedIndex + 1, Name.Text, Email.Text, DateTime.Parse(Birthday.Text));
                 ErrorMessage.Text = resourseManager.GetString("UpdateAccountSuccess", _currentCulture);
                 ErrorMessage.Foreground = Brushes.LimeGreen;
@@ -166,8 +168,35 @@ namespace SecurityTestsUI
                 {
                     ErrorMessage.Text = resourseManager.GetString("LongTime", _currentCulture);
                 }
+                if (ex.Message == "Username is already taken")
+                {
+                    ErrorMessage.Text = resourseManager.GetString("UsernameTaken", _currentCulture);
+                }
+                if (ex.Message == "18 years")
+                {
+                    ErrorMessage.Text = resourseManager.GetString("User18YearsOld", _currentCulture);
+                }
+                ErrorMessage.Foreground = Brushes.Red;
                 ErrorSeparator.Visibility = Visibility.Visible;
                 ErrorMessage.Visibility = Visibility.Visible;
+            }
+        }
+        private void CheckExistingUser(DataAccess db)
+        {
+            var users = db.GetUsers();
+            foreach (var item in users)
+            {
+                if (UserName.Text.Equals(item.UserName) && _currentUser.UserName != item.UserName)
+                {
+                    throw new Exception("Username is already taken");
+                }
+            }
+        }
+        private void Check18YearsOld()
+        {
+            if (!(DateTime.Parse(Birthday.Text) < DateTime.UtcNow.AddYears(-18)))
+            {
+                throw new Exception("18 years");
             }
         }
         private void CheckEmail()

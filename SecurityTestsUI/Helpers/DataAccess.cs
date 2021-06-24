@@ -214,7 +214,7 @@ namespace SecurityTestsUI
             var date2 = "";
 
 
-            string formatDateTime = "MM-dd-yyyy hh:mm:ss";
+            string formatDateTime = "MM-dd-yyyy HH:mm:ss";
 
             var sqlQuery = "";
 
@@ -456,7 +456,7 @@ namespace SecurityTestsUI
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 DateTime time = DateTime.Now;
-                string format = "yyyy-MM-dd hh:mm:ss";
+                string format = "yyyy-MM-dd HH:mm:ss";
                 var sqlQuery = $"Update Users Set CounterOfUsedTries = {user.CounterOfUsedTries+1},DateTimeOfLastTryByFireSafety='{ time.ToString(format) }'  where Id = {user.Id}";
                 db.Execute(sqlQuery);
             }
@@ -470,7 +470,7 @@ namespace SecurityTestsUI
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(DataBaseHelper.Connection("SecurityTestsDB")))
             {
                 DateTime time = DateTime.Now;
-                string format = "yyyy-MM-dd hh:mm:ss";
+                string format = "yyyy-MM-dd HH:mm:ss";
                 var sqlQuery = $"Update Users Set CounterOfUsedTries = {user.CounterOfUsedTries + 1}, DateTimeOfLastTryByIndustrialSafety ='{time.ToString(format)}'  where Id = {user.Id}";
                 db.Execute(sqlQuery);
             }

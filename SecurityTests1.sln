@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTestsUI", "Security
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTestsUI.Library", "SecurityTestsUI.Library\SecurityTestsUI.Library.csproj", "{ED7FE2C1-B461-4959-9419-DE0B4FE0C4E6}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSecurityTests", "SetupSecurityTests\SetupSecurityTests.vdproj", "{568768DA-01F5-45CA-BC72-550CB094DEE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{ED7FE2C1-B461-4959-9419-DE0B4FE0C4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED7FE2C1-B461-4959-9419-DE0B4FE0C4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED7FE2C1-B461-4959-9419-DE0B4FE0C4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{568768DA-01F5-45CA-BC72-550CB094DEE4}.Debug|Any CPU.ActiveCfg = Debug
+		{568768DA-01F5-45CA-BC72-550CB094DEE4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

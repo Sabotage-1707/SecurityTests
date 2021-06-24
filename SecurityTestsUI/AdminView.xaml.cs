@@ -349,7 +349,7 @@ namespace SecurityTestsUI
                 {
                     var user = UsersDataGrid.SelectedItem as User;
                     DataAccess db = new DataAccess();
-                    CheckEmail();
+                    CheckEmail(user.EmailAddress);
                     db.UpdateUser(user.Id, user.UserName, user.UserPassword, user.RoleId, user.Name, user.EmailAddress,
                         user.Birthday, user.CounterOfUsedTries,user.DateTimeOfLastTryByFireSafety, user.DateTimeOfLastTryByIndustrialSafety);
                     ShowSuccess(UserErrorMessage, UserErrorSeparator, "UpdateUserSuccess");
@@ -365,10 +365,10 @@ namespace SecurityTestsUI
                 }
             }
         }
-        private void CheckEmail()
+        private void CheckEmail(string email)
         {
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(Email.Text);
+            Match match = regex.Match(email);
             if (!match.Success)
             {
                 throw new Exception("incorrect email");

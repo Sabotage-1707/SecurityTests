@@ -257,7 +257,14 @@ namespace SecurityTestsUI
 
         private async void Help_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Run(() => System.Diagnostics.Process.Start("Support.chm"));
+            try
+            {
+                await Task.Run(() => System.Diagnostics.Process.Start("Support.chm"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
